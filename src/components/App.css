@@ -1,0 +1,93 @@
+/* App.css */
+
+body { /* estilo del body */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ece5dd;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App { /* estilo del la aplicacion que contendra el chat */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.chat-window { /* estructura de la vetanna del chat */
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message { /* estructura de los mensajes del chat */
+  margin-bottom: 10px;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  clear: both;
+}
+
+.my-message { /* estructura de mi mensaje en el chat */
+  background-color: #dcf8c6;
+  margin-left: auto;
+}
+/* estructura y estilo de los mensajes en el chat */
+.other-message {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message span {
+  font-size: 0.8em;
+  color: #888;
+  bottom: 5px;
+  right: 10px;
+}
+
+.message-input {
+  display: flex;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+}
+
+.message-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+}
+/* estilo del boton del chat de la vetanna del chat */
+.message-input button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius:15%;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* estilo del boton del chat de la vetanna del chat cuando es  */
+.message-input button:hover {
+  background-color: #20b958;
+
+}
