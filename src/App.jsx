@@ -11,27 +11,29 @@ const DATA_MOCK = [
 ];
 
 function App() {
-  const [messages, setMessages] = useState(DATA_MOCK)
+  const arrayMensajes = useState(DATA_MOCK)
+  const mensaje = arrayMensajes[0]
+  const setearMensaje = arrayMensajes[1]
 
-  const addMessage = (newMessage) => {
-    setMessages([...messages, newMessage])
+  const agregarMensaje = (nuevoMensaje) => {
+    setearMensaje([mensaje.push(nuevoMensaje)])
 
-    setTimeout(() => {
-      const responseMessage = {
+    setTiempo(() => {
+      const respuestaMensaje = {
         author: 'pepe',
-        content: 'Esta es una respuesta automática.',
+        content: 'Esta es una respuesta automática al chat.',
         fecha: 'ahora',
         estado: 'visto',
-        id: messages.length + 2,
+        id: mensaje.length + 2,
       }
-      setMessages((prevMessages) => [...prevMessages, responseMessage])
-    }, 1000)
+      setearMensaje((prevMensaje) => [mensaje.push(prevMensaje), respuestaMensaje])
+    }, 1000)  
   }
 
   return (
     <div className="App">
-      <ChatWindow messages={messages} />
-      <MessageInput onSendMessage={addMessage} />
+      <ChatWindow mensaje={mensaje} />
+      <MessageInput onSendMessage={agregarMensaje} />
     </div>
   )
 }
