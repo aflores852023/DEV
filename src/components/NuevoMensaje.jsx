@@ -15,14 +15,14 @@ const NuevoMensaje = ({ nuevochat }) => { // Componente para crear un nuevo chat
     setearMensajeIngresado(''); // Limpia el input
   };
 
-  return (
-    <div className="message-input">
-      <input
-        type="text"
-        value={MensajeIngresado}
-        onChange={(e) => setearMensajeIngresado(e.target.value)}
+  return ( 
+    <div className="message-input">  
+      <input // Input para escribir el nuevo chat
+        type="text"  // Tipo de input
+        value={MensajeIngresado} // Valor inicial del input
+        onChange={(e) => setearMensajeIngresado(e.target.value)} // Actualiza el state al escribir en el input
       />
-      <button onClick={handleSend}>Enviar</button>
+      <button onClick={handleSend}>Enviar</button> {/* Botón para enviar el nuevo chat */}
     </div>
   );
 };
