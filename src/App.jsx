@@ -6,25 +6,25 @@ import data from './data.js'
 
 function App() {
   
-  const [mensaje, setearMensajes] = useState(data)
-  const AgregarMensaje = (nuevochat) => {
+  const [mensaje, setearMensajes] = useState(data) /* defino el state */
+  const AgregarMensaje = (nuevochat) => { /* defino la función para agregar un nuevo chat */
 
-    setearMensajes([...mensaje, nuevochat])
+    setearMensajes([...mensaje, nuevochat]) /* agrego el nuevo chat al state */
 
-      const ContenidoMensajeNuevo ={
+      const ContenidoMensajeNuevo ={ /* defino el contenido del nuevo chat */
         author: 'pepe',
         content: 'Esta es una respuesta automática.',
         fecha: 'ahora',
         estado: 'visto',
         id: mensaje.length + 2,
       }
-    setearMensajes((MensajePrevio) => [...MensajePrevio, ContenidoMensajeNuevo])
+    setearMensajes((MensajePrevio) => [...MensajePrevio, ContenidoMensajeNuevo])  /* agrego el nuevo chat al state */
   }
  
   return (
 
-    <div className="App">
-        <VentanaChat mensaje={mensaje}/>
+    <div className="App"> 
+        <VentanaChat mensaje={mensaje}/> 
         <NuevoMensaje nuevochat={AgregarMensaje}/>
       
     </div>

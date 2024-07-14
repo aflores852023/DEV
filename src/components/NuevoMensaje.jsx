@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NuevoMensaje = ({ nuevochat }) => {
+const NuevoMensaje = ({ nuevochat }) => { // Componente para crear un nuevo chat
   const [MensajeIngresado, setearMensajeIngresado] = useState(''); // State para el input
 
   const handleSend = () => { // Función para enviar el nuevo chat
