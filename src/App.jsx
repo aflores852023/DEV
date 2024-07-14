@@ -13,7 +13,7 @@ function App() {
 
       const ContenidoMensajeNuevo ={ /* defino el contenido del nuevo chat */
         author: 'pepe',
-        content: 'Esta es una respuesta automática.',
+        content: 'Esta es una respuesta automática de pepe.',
         fecha: 'ahora',
         estado: 'visto',
         id: mensaje.length + 2,
