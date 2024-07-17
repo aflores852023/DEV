@@ -3,6 +3,7 @@ import './components/App.css'
 import VentanaChat from './components/VentanaChat.jsx'
 import NuevoMensaje from './components/NuevoMensaje.jsx'
 import data from './data.js'
+import { Routes , Route } from 'react-router-dom'
 
 function App() {
   
@@ -23,11 +24,18 @@ function App() {
  
   return (
 
-    <div className="App"> 
+    <Routes>
+      <Route path="/" element={
+        
+        <div className="App"> 
         <VentanaChat mensaje={mensaje}/> 
         <NuevoMensaje nuevochat={AgregarMensaje}/>
       
     </div>
+      }
+      />
+
+    </Routes>
 
   )
 }
