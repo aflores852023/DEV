@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom'
 
 const VentanaChat = ({ mensaje }) => {  
   return (  
     <div className="chat-window">   {/* estructura de la ventana del chat */}
       <div className="message-container"> 
-      <img src = "src\img\pepe.jpeg"  className='profile-image'/>
+      <Link to="/contact">
+          <img src="src/img/pepe.jpeg" className="profile-image" alt="Pepe" />
+      </Link>
         {mensaje.map((msg) => (
           <div key={msg.id} className={`message ${msg.author === 'yo' ? 'my-message' : 'other-message'}`}> {/*  //*estructura de los mensajes del chat */ }
             <p><strong>{msg.author}</strong>: {msg.content}</p>     

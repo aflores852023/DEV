@@ -1,9 +1,12 @@
 import React, { useState } from 'react' /* lo importo de React */
-import './components/App.css'
-import VentanaChat from './components/VentanaChat.jsx'
-import NuevoMensaje from './components/NuevoMensaje.jsx'
-import data from './data.js'
+import './Components/Css/App.css'
+import VentanaChat from './Components/VentanaChat/VentanaChat.jsx'
+import NuevoMensaje from './Components/NuevoMensaje/NuevoMensaje.jsx'
+import data from './data/data_chat.js'
 import { Routes , Route } from 'react-router-dom'
+import Contact from './Pages/Contact/Contact.jsx'
+import Detail from './Pages/Detail/Detail.jsx'
+import ListContact from './Pages/ListContact/ListContact.jsx'
 
 function App() {
   
@@ -28,13 +31,21 @@ function App() {
       <Route path="/" element={
         
         <div className="App"> 
-        <VentanaChat mensaje={mensaje}/> 
-        <NuevoMensaje nuevochat={AgregarMensaje}/>
+        <VentanaChat mensaje={mensaje}/>  {/* //* componente para mostrar el chat */ }
+        <NuevoMensaje nuevochat={AgregarMensaje}/>  {/* componente para crear un nuevo chat  */}
       
     </div>
       }
+
       />
 
+      <Route path="/contact" element={<Contact/>} /> {/* //* ruta de contacto */}
+      <Route path="/detail" element={<Detail/>} /> {/* //* ruta de contacto  */}
+      <Route path="/ListaContacto" element={<ListContact/>} /> {/* //* ruta de contacto  */}  
+
+
+        
+      
     </Routes>
 
   )
