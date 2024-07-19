@@ -1,10 +1,9 @@
 import React from 'react';
-
 const ContactoTarjeta = ({ contacto }) => {
   const { id, name, email, phone, thumbnail } = contacto; // destructuring de las propiedades del contacto
 
   return (
-    <div className="contacto-item">
+    <div className="contacto">
      {/*  <img src={thumbnail} alt={nombre} className="imagen-contacto" /> */}
       <div className="info-contacto">
         <div className="nombre-y-hora">

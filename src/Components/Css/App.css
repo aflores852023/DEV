@@ -101,7 +101,7 @@ body { /* estilo del body */
 
   /* Contacto.css */
 
-.contacto-item {
+contacto {
   display: flex;
   align-items: center;
   padding: 10px;
