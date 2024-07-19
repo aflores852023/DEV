@@ -31,6 +31,11 @@ body { /* estilo del body */
   flex-direction: column;
 }
 
+.chat-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .message { /* estructura de los mensajes del chat */
   margin-bottom: 10px;
   max-width: 80%;
@@ -97,11 +102,10 @@ body { /* estilo del body */
   height: 50px;
   border-radius: 50%;
   margin-right: 10px;
+}
 
-
-  /* Contacto.css */
-
-contacto {
+/* Estilos para la tarjeta de contacto */
+.contacto {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -110,6 +114,10 @@ contacto {
   transition: background-color 0.3s ease;
 }
 
+.id {
+  font-weight: bold;
+  color: #333;
+}
 .contacto-item:hover {
   background-color: #f0f0f0;
 }
@@ -149,5 +157,21 @@ contacto {
   color: #999;
 }
 
+/*Boton de ver contactos*/
+.contact-button {
+  background-color: #25d366;
+  color: white;
+  border: none; 
+  padding: 10px 20px;
+  border-radius:15%;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 10px;
+  margin-bottom: 20px;
 
+  
+
+}
+.contact-button:hover {
+  background-color: #20b958;
 }

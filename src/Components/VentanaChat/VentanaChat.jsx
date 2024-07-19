@@ -8,6 +8,12 @@ const VentanaChat = ({ mensaje }) => {
       <Link to="/contact">
           <img src="src/img/pepe.jpeg" className="profile-image" alt="Pepe" />
       </Link>
+
+      <Link to="/ListaContacto">
+        <button className="contact-button">Ver Contactos</button>
+      </Link>
+      <span className="chat-name">{mensaje[0].author}</span>
+
         {mensaje.map((msg) => (
           <div key={msg.id} className={`message ${msg.author === 'yo' ? 'my-message' : 'other-message'}`}> {/*  //*estructura de los mensajes del chat */ }
             <p><strong>{msg.author}</strong>: {msg.content}</p>     

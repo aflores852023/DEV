@@ -6,11 +6,13 @@ const ContactoTarjeta = ({ contacto }) => {
     <div className="contacto">
      {/*  <img src={thumbnail} alt={nombre} className="imagen-contacto" /> */}
       <div className="info-contacto">
+      <span className="id">ID {id}</span>
         <div className="nombre-y-hora">
+        
           <span className="name">{name}</span>
-          <span className="email">{email}</span>
+          <span className="email">Correo: {email}</span>
         </div>
-        <span className="phone">{phone}</span>
+        <span className="phone">Telefono: {phone}</span>
       </div>
     </div>
   );
