@@ -12,7 +12,7 @@ body { /* estilo del body */
 }
 
 .App { /* estilo del la aplicacion que contendra el chat */
-  background-color: #ffffff;
+  background-color: #95b695;
   border-radius: 10px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -169,9 +169,80 @@ body { /* estilo del body */
   font-size: 10px;
   margin-bottom: 20px;
 
-  
-
 }
 .contact-button:hover {
   background-color: #20b958;
+}
+
+
+/* Estilo general del contenedor */
+.chat-list-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Estilo para cada chat */
+.chat-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Imagen de perfil */
+.chat-item .profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  background-color: #ccc;
+}
+
+/* Contenedor de la información del chat */
+.chat-info {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+/* Nombre del contacto */
+.chat-info .contact-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.chat-info .contact-email {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+/* Último mensaje */
+.chat-info .last-message {
+  font-size: 14px;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hora del último mensaje */
+.chat-time {
+  font-size: 12px;
+  color: #888;
+  margin-left: 10px;
+  white-space: nowrap;
 }

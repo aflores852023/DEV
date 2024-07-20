@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react' //* importo el modulo de React */
+import {Link} from 'react-router-dom' //* importo el modulo de react-router-dom */
 
-const VentanaChat = ({ mensaje }) => {  
-  return (  
-    <div className="chat-window">   {/* estructura de la ventana del chat */}
+const VentanaChat = ({ mensaje }) => {  //* defino el componente VentanaChat */
+  return (  //*estructura de la ventana del chat */
+    <div className="chat-window">   
       <div className="message-container"> 
       <Link to="/contact">
-          <img src="src/img/pepe.jpeg" className="profile-image" alt="Pepe" />
+        <img src="src/img/pepe.jpeg" className="profile-image" />
       </Link>
-
       <Link to="/ListaContacto">
         <button className="contact-button">Ver Contactos</button>
       </Link>
