@@ -1,12 +1,24 @@
-import React from 'react'
+import React,{ useState }from 'react'
+import { useParams } from 'react-router-dom'
 import '../../Components/Css/App.css' //* importo el archivo de estilos */
 import VentanaChat from '../../Components/VentanaChat/VentanaChat.jsx' /* importo el componente VentanaChat */
 import NuevoMensaje from '../../Components/NuevoMensaje/NuevoMensaje.jsx' // importo el componente NuevoChat
 import data from '../../data/data_chat.js' //* importo el archivo de datos */
+import { contactos_data } from '../../data/contacto_data.js'
 const ChatWindow = () => {
-    const [mensaje, setearMensajes] = useState(data) /* defino el state */
+    
+  const parametros = useParams()
+    /* console.log(parametros) */
+
+  const [mensaje, setearMensajes] = useState(data) /* defino el state */
    
-    const AgregarMensaje = (nuevochat) => { /* defino la función para agregar un nuevo chat */
+  const obtenerId = (id) => {
+    contactos_data.find(chat => Number(chat.id) === Number(id)  ) 
+}
+  const chatDetalle = obtenerId(parametros.id)
+    console.log(chatDetalle)
+
+  const AgregarMensaje = (nuevochat) => { /* defino la función para agregar un nuevo chat */
         setearMensajes([...mensaje, nuevochat]) /* agrego el nuevo chat al state */
           const ContenidoMensajeNuevo ={ /* defino el contenido del nuevo chat */
             author: 'pepe',
@@ -22,7 +34,7 @@ const ChatWindow = () => {
     <VentanaChat mensaje={mensaje}/>  {/* //* componente para mostrar el chat */ }
     <NuevoMensaje nuevochat={AgregarMensaje}/>  {/* componente para crear un nuevo chat  */}
   
-    </div>
+  </div>
   )
 }
 
