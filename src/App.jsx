@@ -14,7 +14,7 @@ function App() {
     <Routes>
       <Route path="/" element={ 
         <div className="App">  
-        <ListChats contactos={data}/> 
+        <ListChats/> 
         </div>
       }
       />  

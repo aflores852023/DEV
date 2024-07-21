@@ -4,34 +4,39 @@ export const contactos_data = [
         name: 'pepe',
         email: 'pepe@pe.pe',
         phone: '123456789', 
-        thumbnail: 'src/img/pepe.jpeg' 
+        thumbnail: 'src/img/pepe.jpeg', 
+        lastmessage: 'hola que tal, soy pepe',
     },
     {
         id: 2,
         name: 'yo',
         email: 'yo@yo.yo',
         phone: '123456789', 
-        thumbnail: 'src/img/pepe.jpeg' 
+        thumbnail: 'src/img/pepe.jpeg',
+        lastmessage: 'hola que tal, soy yo', 
     },
     {
         id: 3,
         name: 'Pedro',
         email: 'pedro@pe.pe',
         phone: '123456789', 
-        thumbnail: 'src/img/pepe.jpeg' 
+        thumbnail: 'src/img/pepe.jpeg',
+        lastmessage: 'hola que tal, soy Pedro', 
     },
     {
         id: 4,
         name: 'luis',
         email: 'luis@luis.lu',
         phone: '123456789', 
-        thumbnail: 'src/img/pepe.jpeg' 
+        thumbnail: 'src/img/pepe.jpeg',
+        lastmessage: 'hola que tal, soy Luis',
     },
         {
         id: 5,
         name: 'Juan',
         email: 'juan@ju.ju',
         phone: '123456789', 
-        thumbnail: 'src/img/pepe.jpeg' 
+        thumbnail: 'src/img/pepe.jpeg',
+        lastmessage: 'hola que tal, soy Juan',
     },
 ];

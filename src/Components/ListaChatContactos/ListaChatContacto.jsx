@@ -1,9 +1,16 @@
 import React from 'react'
-
-const ListaChatContacto = () => {
-return (
-    <div>ListaChatContacto</div>
+import ListaChats from '../ListaChats/ListaChats'
+const ListaChatContacto = ({chats}) => {
+    return (
+    <div>
+        {   
+        chats.map((chat) => (   
+            <ListaChats key={chat.id} chat={chat} />
+            
+        ))
+        }
+    </div>
 )
-}
 
+}
 export default ListaChatContacto
