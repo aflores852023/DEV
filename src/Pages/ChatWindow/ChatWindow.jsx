@@ -4,7 +4,7 @@ import '../../Components/Css/App.css' //* importo el archivo de estilos */
 import VentanaChat from '../../Components/VentanaChat/VentanaChat.jsx' /* importo el componente VentanaChat */
 import NuevoMensaje from '../../Components/NuevoMensaje/NuevoMensaje.jsx' // importo el componente NuevoChat
 import data from '../../data/data_chat.js' //* importo el archivo de datos */
-import { contactos_data } from '../../data/contacto_data.js'
+import  obtenerId  from  '../../helpers/chats'
 const ChatWindow = () => {
     
   const parametros = useParams()
@@ -12,9 +12,7 @@ const ChatWindow = () => {
 
   const [mensaje, setearMensajes] = useState(data) /* defino el state */
    
-  const obtenerId = (id) => {
-    contactos_data.find(chat => Number(chat.id) === Number(id)  ) 
-}
+  
   const chatDetalle = obtenerId(parametros.id)
     console.log(chatDetalle)
 

@@ -1,4 +1,4 @@
-export const contactos_data = [
+ const contactos_data = [
     {
         id: 1,
         name: 'pepe',
@@ -40,3 +40,5 @@ export const contactos_data = [
         lastmessage: 'hola que tal, soy Juan',
     },
 ];
+
+export default contactos_data

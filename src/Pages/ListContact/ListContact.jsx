@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactos_data } from '../../data/contacto_data';
+import  contactos_data  from '../../data/contacto_data';
 import ListaContacto from '../../Components/ListaContacto/ListaContacto';
 
 const ListContact = () => {
