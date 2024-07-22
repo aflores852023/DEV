@@ -1,26 +1,21 @@
-import React from 'react'
-import {Link } from 'react-router-dom'
-const ListaChats = ({ chat }) => {
-    const { id, 
-        name, 
-        email, 
-        phone, 
-        thumbnail,
-        lastmessage 
-    } = chat
-     // destructuring de las propiedades del contacto
-    
- 
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-    return (
-<div className="chat-list-container">
-    {/*  <img src={thumbnail} alt={nombre} className="chat-item .profile-pic" /> */}
-    <Link to={ 'ChatWindow/'+ id } className="chat-item"  > 
-    <div className="chat-item"> {name} </div>
-    <span className="id" hidden={true} >{id}</span>
-    <div className="chat-info .contact-lastmessage"> {lastmessage}</div>
-    </Link>
-</div>
-)
-}
-export default ListaChats
+const ListaChats = ({ chat }) => {
+  const { id, name, thumbnail, lastmessage, time } = chat; // destructuring de las propiedades del contacto
+
+  return (
+    <div className="contact">
+      <Link to={'/ChatWindow/' + id} className="contact-link">
+        <div className="contact-img" style={{ backgroundImage: `url(${thumbnail})` }}></div>
+        <div className="contact-info">
+          <h3>{name}</h3>
+          <p>{lastmessage}</p>
+        </div>
+        <div className="chat-time">{time}</div>
+      </Link>
+    </div>
+  );
+};
+
+export default ListaChats;

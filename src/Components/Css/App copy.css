@@ -1,0 +1,87 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #ece5dd;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.App {
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgba(3, 2, 2, 0.1);
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow: hidden;
+  background-image: url(../../img/fondowsp.jpg);
+  padding: 20px 5px;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.app-shearch-input-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px; 
+}
+.id {
+  font-weight: bold;
+  color: #333;
+}
+
+.contacto-item:hover {
+  background-color: #f0f0f0;
+}
+
+.info-contacto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nombre-y-hora {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+
+.phone {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.chat-list-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto 10px;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+

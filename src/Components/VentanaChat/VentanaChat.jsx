@@ -3,15 +3,16 @@ import {Link} from 'react-router-dom' //* importo el modulo de react-router-dom 
 
 const VentanaChat = ({ mensaje }) => {  //* defino el componente VentanaChat */
   return (  //*estructura de la ventana del chat */
-    <div className="chat-window">   
-      <div className="message-container"> 
+   <div> 
       <Link to="/contact">
-        <img src="src/img/pepe.jpeg" className="profile-image" />
+        <img src={mensaje[0].thumbnail} alt={mensaje[0].author} className="contact img" />
       </Link>
+      
+      <span className="chat-name">{mensaje[0].author}</span>
+
       <Link to="/ListaContacto">
         <button className="contact-button">Ver Contactos</button>
       </Link>
-      <span className="chat-name">{mensaje[0].author}</span>
 
         {mensaje.map((msg) => (
           <div key={msg.id} className={`message ${msg.author === 'yo' ? 'my-message' : 'other-message'}`}> {/*  //*estructura de los mensajes del chat */ }
@@ -19,8 +20,8 @@ const VentanaChat = ({ mensaje }) => {  //* defino el componente VentanaChat */
             <span>{msg.fecha} - {msg.estado}</span> {/* //*fecha y estado del chat */ }
           </div>
         ))}
-      </div>
     </div>
+
   );
 };
 

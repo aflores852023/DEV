@@ -14,7 +14,7 @@ const ChatWindow = () => {
    
   
   const chatDetalle = obtenerId(parametros.id)
-    console.log(chatDetalle)
+  /*   console.log(chatDetalle) */
 
   const AgregarMensaje = (nuevochat) => { /* defino la función para agregar un nuevo chat */
         setearMensajes([...mensaje, nuevochat]) /* agrego el nuevo chat al state */
