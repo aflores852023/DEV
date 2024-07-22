@@ -14,6 +14,7 @@ const ListaChats = ({ chat }) => {
         </div>
         <div className="chat-time">{time}</div>
       </Link>
+
     </div>
   );
 };

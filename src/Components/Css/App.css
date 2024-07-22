@@ -42,7 +42,26 @@ body {
   text-align: center;
 }
 
+/* Barra de búsqueda */
+.search-bar {
+  padding: 10px;
+  background-color: #34495e;
+  text-align: center;
+  border-bottom: 1px solid #3b5a70;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #2c3e50;
+}
+
+/* Contenedor de contactos */
 .contacts {
+  flex-grow: 1; /* Asegura que los contactos ocupen el espacio restante */
   padding: 20px;
   overflow-y: auto;
 }
@@ -79,6 +98,7 @@ body {
   margin-right: 15px;
   background-size: cover;
   background-position: center;
+  background-color: #ccc; /* Color de fondo en caso de que la imagen no se cargue */
 }
 
 .contact-info {
@@ -88,11 +108,12 @@ body {
 .contact-info h3 {
   margin-bottom: 5px;
   font-size: 1.1em;
+  color: white; /* Asegura que el texto del nombre sea blanco */
 }
 
 .contact-info p {
   margin: 0;
-  color: #bdc3c7;
+  color: #bdc3c7; /* Color gris claro para el último mensaje */
 }
 
 .chat-time {
@@ -181,32 +202,36 @@ body {
 /* Estilos responsivos */
 @media (max-width: 768px) {
   .chat-container {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .sidebar {
-      width: 100%;
-      height: 30%;
+    width: 100%;
+    height: 30%;
   }
 
   .chat-window {
-      width: 100%;
-      height: 70%;
+    width: 100%;
+    height: 70%;
   }
 
   .chat-header, .chat-input {
-      padding: 10px;
+    padding: 10px;
   }
 
   .chat-messages {
-      padding: 10px;
+    padding: 10px;
   }
 
   .chat-input input {
-      margin-right: 5px;
+    margin-right: 5px;
   }
 
   .chat-input button {
-      padding: 10px;
+    padding: 10px;
+  }
+
+  .search-bar {
+    order: -1; /* Mueve la barra de búsqueda arriba de los contactos */
   }
 }
